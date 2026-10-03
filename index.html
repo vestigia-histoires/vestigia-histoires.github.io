@@ -17,8 +17,12 @@
   a { color:var(--gold); }
   .btn { display:inline-block; margin:24px 0; padding:14px 28px; border:1px solid var(--gold); color:var(--gold); text-decoration:none; letter-spacing:.2em; font-family: Arial, sans-serif; font-size:14px; }
   .btn:hover { background:var(--gold); color:var(--ink); }
-  footer { margin-top:56px; font-size:14px; color:var(--muted); }
-  footer a { color:var(--muted); }
+  .api { margin:40px auto 0; max-width:620px; padding:20px 24px; border:1px solid #3A3128; text-align:left; font-size:16px; }
+  .api p { font-size:16px; margin:6px 0; }
+  .api strong { color:var(--gold); }
+  nav.legal { margin-top:40px; font-size:16px; }
+  nav.legal a { margin:0 10px; }
+  footer { margin-top:24px; font-size:14px; color:var(--muted); }
 </style>
 </head>
 <body>
@@ -37,11 +41,20 @@
   <div class="rule"></div>
   <p>VESTIGIA est une chaîne YouTube francophone qui raconte chaque jour une histoire vraie et méconnue : mystères jamais résolus, personnages effacés des livres, batailles étranges et faits insolites de l'Histoire.</p>
   <p>Les vidéos sont réalisées avec l'aide d'outils d'intelligence artificielle (écriture, voix, illustrations) et vérifiées avant publication. Les théories sont toujours présentées comme des théories.</p>
-  <a class="btn" href="https://www.youtube.com/@vestigia.histoires">VOIR LA CHAÎNE</a>
+  <a class="btn" href="https://www.youtube.com/@vestigia.histoires">VOIR LA CHAÎNE SUR YOUTUBE</a>
   <p>Contact : <a href="mailto:vestigia.histoires@gmail.com">vestigia.histoires@gmail.com</a></p>
-  <footer>
-    <a href="privacy.html">Politique de confidentialité / Privacy Policy</a> · © VESTIGIA
-  </footer>
+
+  <div class="api">
+    <p><strong>VESTIGIA uses YouTube API Services.</strong></p>
+    <p>Our private publishing tool uses the YouTube API Services to upload and schedule videos on our own YouTube channel only. By using it, you agree to be bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>. See also the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+    <p>L'outil de publication de VESTIGIA utilise les services d'API YouTube, uniquement pour notre propre chaîne.</p>
+  </div>
+
+  <nav class="legal">
+    <a href="privacy.html">Privacy Policy / Politique de confidentialité</a> ·
+    <a href="terms.html">Terms of Service / Conditions d'utilisation</a>
+  </nav>
+  <footer>© VESTIGIA</footer>
 </main>
 </body>
 </html>
