@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>VESTIGIA — Connexion TikTok</title>
+<style>
+  :root { --ink:#0F0D0B; --parchment:#E8DCC2; --gold:#C8A15A; --muted:#A8997F; }
+  body { margin:0; background:var(--ink); color:var(--parchment); font-family: Georgia, "Times New Roman", serif; line-height:1.65; }
+  main { max-width:760px; margin:0 auto; padding:56px 24px; }
+  h1 { letter-spacing:.08em; font-size:32px; margin-bottom:4px; }
+  h2 { color:var(--gold); font-size:24px; margin-top:40px; }
+  h3 { font-size:18px; margin-top:28px; }
+  a { color:var(--gold); }
+  .muted { color:var(--muted); font-size:14px; }
+  .notice { border:1px solid var(--gold); padding:16px 20px; margin:24px 0; }
+  hr { border:0; border-top:1px solid #3A3128; margin:48px 0; }
+</style>
+</head>
+<body>
+<main>
+<h1>VESTIGIA</h1>
+<p class="muted">TikTok authorization / Autorisation TikTok</p>
+<div class="notice">
+  <p id="msg">Aucun code reçu. / No code received.</p>
+  <p><code id="code" style="word-break:break-all;color:#C8A15A"></code></p>
+</div>
+<p>Copiez ce code et collez-le dans le terminal de la VM, pas dans une conversation. / Copy this code into the server terminal only.</p>
+<p class="muted"><a href="index.html">← VESTIGIA</a> · <a href="privacy.html">Privacy Policy / Politique de confidentialité</a></p>
+<script>
+const q = new URLSearchParams(location.search);
+if (q.get("code")) { document.getElementById("msg").textContent = "Code d'autorisation reçu / Authorization code received :"; document.getElementById("code").textContent = q.get("code"); }
+else if (q.get("error")) { document.getElementById("msg").textContent = "Erreur / Error : " + q.get("error") + " " + (q.get("error_description") || ""); }
+</script>
+</main>
+</body>
+</html>
